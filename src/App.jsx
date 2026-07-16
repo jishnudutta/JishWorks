@@ -1,122 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+    <div>
+      <main className="min-h-screen bg-[#050816] flex flex-col">
+        <nav
+          className="
+            fixed top-5 left-1/2 -translate-x-1/2
+            z-50
+            flex items-center
+            w-[95%] max-w-6xl
+            px-8 py-4
+            rounded-full
+            bg-white/10
+            backdrop-blur-2xl
+            border border-white/10
+            shadow-2xl
+          "
         >
-          Count is {count}
-        </button>
-      </section>
+          <h1 className="text-2xl font-bold tracking-tight text-white select-none">
+            Jish<span className="text-orange-400">Works</span>
+          </h1>
 
-      <div className="ticks"></div>
+          <div className="ml-auto flex items-center gap-8 text-gray-300">
+            <a href="#about" className="hover:text-white transition">
+              About
+            </a>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            <a href="#projects" className="hover:text-white transition">
+              Projects
+            </a>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            <a href="#skills" className="hover:text-white transition">
+              Skills
+            </a>
+
+            <a href="#contact" className="hover:text-white transition">
+              Contact
+            </a>
+          </div>
+        </nav>
+        {/* <section className="flex items-center justify-center">
+          <div>
+            <div className="text-white flex-col w-0.5 left-0">
+             ------------------------------------------
+            </div>
+          </div>
+        </section> */}
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
