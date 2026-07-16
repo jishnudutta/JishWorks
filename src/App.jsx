@@ -1,7 +1,8 @@
 function App() {
+  
   return (
     <div>
-      <main className="min-h-screen bg-[#050816] flex flex-col">
+      <main className="min-h-screen bg-[#050816] flex flex-col text-white">
         <nav
           className="
             fixed top-5 left-1/2 -translate-x-1/2
@@ -38,13 +39,12 @@ function App() {
             </a>
           </div>
         </nav>
-        {/* <section className="flex items-center justify-center">
-          <div>
-            <div className="text-white flex-col w-0.5 left-0">
-             ------------------------------------------
-            </div>
+        <section className="flex items-center justify-center mx-auto mt-40">
+          <div className="max-w-3xl">
+            <h3>About Me</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat facere sint cum placeat unde eius earum, quibusdam dolorem vitae fugit minus tempora cupiditate? Quasi dolorem deserunt similique distinctio pariatur earum.</p>
           </div>
-        </section> */}
+        </section>
       </main>
     </div>
   );
