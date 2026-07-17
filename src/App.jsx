@@ -1,5 +1,4 @@
 function App() {
-  
   return (
     <div>
       <main className="min-h-screen bg-[#050816] flex flex-col text-white">
@@ -22,6 +21,10 @@ function App() {
           </h1>
 
           <div className="ml-auto flex items-center gap-8 text-gray-300">
+            <a href="#hero" className="hover:text-white transition">
+              Top
+            </a>
+
             <a href="#about" className="hover:text-white transition">
               About
             </a>
@@ -39,11 +42,26 @@ function App() {
             </a>
           </div>
         </nav>
-        <section className="flex items-center justify-center mx-auto mt-40">
-          <div className="max-w-3xl">
-            <h3>About Me</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat facere sint cum placeat unde eius earum, quibusdam dolorem vitae fugit minus tempora cupiditate? Quasi dolorem deserunt similique distinctio pariatur earum.</p>
-          </div>
+        <section
+          id="hero"
+          className="flex flex-col items-center justify-center mx-auto mt-40"
+        >
+          <h2 className="font-bold text-6xl md:text-8xl font-display">
+            Hi, I'm Jishnu Dutta.
+          </h2>
+          <br />
+          <p className="max-w-3xl py-5 font-display font-medium md:text-2xl text-xl text-gray-200">
+            A curious developer who loves exploring new technologies and
+            building meaningful projects. From machine learning and AI to modern
+            web development, I'm always learning, experimenting, and turning
+            ideas into reality.
+          </p>
+        </section>
+        <section id="about" className="flex flex-col items-center justify-center mx-auto mt-10">
+          <h3 className="font-display font-semibold text-4xl"></h3>
+          <p className="font-sans font-normal text-lg max-w-3xl my-2 text-gray-300">
+            
+          </p>
         </section>
       </main>
     </div>
