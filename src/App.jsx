@@ -1,5 +1,6 @@
 import SkillCard from "./components/SkillCard";
-import { FaReact, FaServer, FaTools, FaBrain } from "react-icons/fa";
+import { FaReact, FaServer, FaTools, FaBrain, FaGithub } from "react-icons/fa";
+import SpecularButton from "./components/SpecularButton";
 
 function App() {
   const skillsData = [
@@ -14,6 +15,7 @@ function App() {
         { name: "JavaScript", style: "text-yellow-400" },
         { name: "HTML", style: "text-orange-500" },
         { name: "CSS", style: "text-blue-500" },
+        { name: "Streamlit", style: "text-red-400" },
       ],
     },
     {
@@ -47,12 +49,13 @@ function App() {
       skills: [
         { name: "GitHub", style: "text-gray-300" },
         { name: "VS Code", style: "text-blue-400" },
+        { name: "Vercel", style: "text-white" },
       ],
     },
   ];
   return (
     <div className=" bg-[#050816] ">
-      <main className="min-h-screen flex flex-col text-white">
+      <main className="min-h-screen flex flex-col text-white mb-10">
         <nav
           className="
             fixed top-5 left-1/2 -translate-x-1/2
@@ -110,7 +113,7 @@ function App() {
         </section>
         <section
           id="about"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
         >
           <h3 className="font-display font-semibold text-3xl md:text-5xl">
             About
@@ -133,7 +136,7 @@ function App() {
         </section>
         <section
           id="skills"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
         >
           <h3 className="font-display font-semibold text-3xl md:text-5xl">
             Skills
@@ -148,6 +151,145 @@ function App() {
                 skills={card.skills}
               />
             ))}
+          </div>
+        </section>
+        <section
+          id="projects"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
+        >
+          <h3 className="font-display font-semibold text-3xl md:text-5xl">
+            Projects
+          </h3>
+          <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
+            I'm passionate about building software across web development, AI,
+            electronics, and open source. Some of my favorite projects include
+            JishOS, ByteBoard, and Smart Planter. You can explore all of them on
+            my GitHub.
+          </p>
+          <SpecularButton
+            size="lg"
+            radius={20}
+            tint="#3B82F6"
+            tintOpacity={0.18}
+            blur={16}
+            textColor="#ffffff"
+            lineColor="#3B82F6"
+            baseColor="rgba(255,255,255,0.05)"
+            intensity={1.2}
+            shineSize={10}
+            shineFade={45}
+            thickness={1.2}
+            speed={0.3}
+            followMouse
+            proximity={240}
+            autoAnimate={false}
+            onClick={() =>
+              window.open(
+                "https://github.com/jishnudutta",
+                "_blank",
+                "noopener,noreferrer",
+              )
+            }
+          >
+            <span className="flex gap-1">
+              <FaGithub className="text-lg" />
+              <span>View GitHub</span>
+            </span>
+          </SpecularButton>
+        </section>
+        <section
+          id="contact"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
+        >
+          <h3 className="font-display font-semibold text-3xl md:text-5xl">
+            Contact
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <SpecularButton
+              size="lg"
+              radius={20}
+              tint="#5865F2"
+              tintOpacity={0.18}
+              blur={16}
+              textColor="#ffffff"
+              lineColor="#5865F2"
+              baseColor="rgba(255,255,255,0.05)"
+              intensity={1.2}
+              shineSize={10}
+              shineFade={45}
+              thickness={1.2}
+              speed={0.3}
+              followMouse
+              proximity={240}
+              autoAnimate={false}
+              onClick={() =>
+                window.open(
+                  "https://discord.com/users/jishnu9220",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
+            >
+              Contact on Discord
+            </SpecularButton>
+
+            <SpecularButton
+              size="lg"
+              radius={20}
+              tint="#22C55E"
+              tintOpacity={0.18}
+              blur={16}
+              textColor="#ffffff"
+              lineColor="#22C55E"
+              baseColor="rgba(255,255,255,0.05)"
+              intensity={1.2}
+              shineSize={10}
+              shineFade={45}
+              thickness={1.2}
+              speed={0.3}
+              followMouse
+              proximity={240}
+              autoAnimate={false}
+              onClick={() =>
+                (window.location.href = "mailto:jishnudutta2002@gmail.com")
+              }
+            >
+              Email Me
+            </SpecularButton>
+            <SpecularButton
+              size="lg"
+              radius={20}
+              tint="#3B82F6"
+              tintOpacity={0.18}
+              blur={16}
+              textColor="#ffffff"
+              lineColor="#3B82F6"
+              baseColor="rgba(255,255,255,0.05)"
+              intensity={1.2}
+              shineSize={10}
+              shineFade={45}
+              thickness={1.2}
+              speed={0.3}
+              followMouse
+              proximity={240}
+              autoAnimate={false}
+              onClick={() =>
+                window.open(
+                  "https://slack.com/app_redirect?channel=U0B60V8BLHF",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
+            >
+              Contact on Slack
+            </SpecularButton>
+          </div>
+          <div>
+            <p className="mt-6 text-center text-sm text-gray-400 max-w-md">
+              <span className="font-medium text-gray-300">Note:</span> The Slack
+              button only works if you're already a member of the Hack Club
+              Slack workspace.
+            </p>
           </div>
         </section>
       </main>
