@@ -7,34 +7,34 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?logo=tailwindcss)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript)
 
-## 🌐 Live Website
+## Live Website
 
 **https://jishworks.vercel.app**
 
-## ✨ About
+## About
 
 JishWorks is my personal portfolio where I share the projects I've built, the technologies I enjoy working with, and my journey as a 13-year-old student developer.
 
 The goal of this portfolio is to provide a clean, modern place for people to learn about my work and get in touch with me.
 
-## 🚀 Features
+## Features
 
-- Modern dark UI
+- Modern dark interface
 - Responsive design
 - Glassmorphism navigation
-- Skills section
+- Skills showcase
 - GitHub integration
 - Contact section
 - Smooth scrolling navigation
 
-## 🛠️ Built With
+## Tech Stack
 
 - React
 - Vite
 - Tailwind CSS
 - React Icons
 
-## 📂 Sections
+## Sections
 
 - Home
 - About
@@ -42,7 +42,7 @@ The goal of this portfolio is to provide a clean, modern place for people to lea
 - Projects
 - Contact
 
-## 🧠 Current Skills
+## Skills
 
 ### Frontend
 
@@ -74,7 +74,7 @@ The goal of this portfolio is to provide a clean, modern place for people to lea
 - VS Code
 - Vercel
 
-## 📌 Featured Projects
+## Featured Projects
 
 - JishOS
 - ByteBoard
@@ -82,13 +82,13 @@ The goal of this portfolio is to provide a clean, modern place for people to lea
 
 More projects are available on my GitHub profile.
 
-## 📬 Contact
+## Contact
 
 - Discord
 - Email
 - Hack Club Slack (members only)
 
-## 💻 Running Locally
+## Getting Started
 
 Clone the repository:
 
@@ -96,7 +96,7 @@ Clone the repository:
 git clone https://github.com/jishnudutta/jishworks.git
 ```
 
-Go into the project:
+Navigate to the project directory:
 
 ```bash
 cd jishworks
@@ -114,10 +114,10 @@ Start the development server:
 npm run dev
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
 ---
 
-Made with ❤️ by **Jishnu Dutta**
+Built by **Jishnu Dutta**
