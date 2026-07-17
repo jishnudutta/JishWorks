@@ -1,7 +1,58 @@
+import SkillCard from "./components/SkillCard";
+import { FaReact, FaServer, FaTools, FaBrain } from "react-icons/fa";
+
 function App() {
+  const skillsData = [
+    {
+      logo: FaReact,
+      category: "Frontend",
+      description:
+        "Building responsive and modern user interfaces with today's web technologies.",
+      skills: [
+        { name: "React", style: "text-cyan-400" },
+        { name: "Tailwind CSS", style: "text-sky-400" },
+        { name: "JavaScript", style: "text-yellow-400" },
+        { name: "HTML", style: "text-orange-500" },
+        { name: "CSS", style: "text-blue-500" },
+      ],
+    },
+    {
+      logo: FaServer,
+      category: "Backend",
+      description: "Creating fast, scalable APIs and backend systems.",
+      skills: [
+        { name: "Python", style: "text-yellow-300" },
+        { name: "FastAPI", style: "text-green-400" },
+        { name: "REST APIs", style: "text-purple-400" },
+        { name: "MongoDB", style: "text-green-500" },
+      ],
+    },
+    {
+      logo: FaBrain,
+      category: "Machine Learning",
+      description:
+        "Training models, analyzing data, and experimenting with AI.",
+      skills: [
+        { name: "Scikit-learn", style: "text-orange-400" },
+        { name: "Pandas", style: "text-cyan-400" },
+        { name: "NumPy", style: "text-blue-400" },
+        { name: "XGBoost", style: "text-yellow-500" },
+        { name: "Matplotlib", style: "text-red-400" },
+      ],
+    },
+    {
+      logo: FaTools,
+      category: "Tools",
+      description: "Tools I use to build, collaborate, and ship projects.",
+      skills: [
+        { name: "GitHub", style: "text-gray-300" },
+        { name: "VS Code", style: "text-blue-400" },
+      ],
+    },
+  ];
   return (
-    <div>
-      <main className="min-h-screen bg-[#050816] flex flex-col text-white">
+    <div className=" bg-[#050816] ">
+      <main className="min-h-screen flex flex-col text-white">
         <nav
           className="
             fixed top-5 left-1/2 -translate-x-1/2
@@ -87,7 +138,17 @@ function App() {
           <h3 className="font-display font-semibold text-3xl md:text-5xl">
             Skills
           </h3>
-          <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300"></p>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 mt-10">
+            {skillsData.map((card) => (
+              <SkillCard
+                key={card.category}
+                logo={card.logo}
+                category={card.category}
+                description={card.description}
+                skills={card.skills}
+              />
+            ))}
+          </div>
         </section>
       </main>
     </div>

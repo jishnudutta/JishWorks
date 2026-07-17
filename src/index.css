@@ -9,3 +9,11 @@
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
+
+html,
+body,
+#root {
+  background: #050816;
+  min-height: 100%;
+  margin: 0;
+}
