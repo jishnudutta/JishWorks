@@ -55,7 +55,7 @@ function App() {
   ];
   return (
     <div className=" bg-[#050816] ">
-      <main className="min-h-screen flex flex-col text-white mb-10">
+      <main className="min-h-screen flex flex-col text-white">
         <nav
           className="
             fixed top-5 left-1/2 -translate-x-1/2
@@ -113,9 +113,9 @@ function App() {
         </section>
         <section
           id="about"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl">
+          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             About
           </h3>
           <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
@@ -137,9 +137,9 @@ function App() {
         </section>
         <section
           id="skills"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl">
+          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             Skills
           </h3>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 mt-10">
@@ -156,9 +156,9 @@ function App() {
         </section>
         <section
           id="projects"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl">
+          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             Projects
           </h3>
           <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
@@ -200,9 +200,9 @@ function App() {
         </section>
         <section
           id="contact"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28"
+          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl">
+          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             Contact
           </h3>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
