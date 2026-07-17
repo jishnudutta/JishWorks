@@ -116,13 +116,13 @@ function App() {
             About
           </h3>
           <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
-            I'm a student developer who enjoys turning curiosity into projects.
-            I love exploring different areas of technology, from machine
-            learning and AI to modern web development and backend systems.
-            Rather than staying in one field, I enjoy learning new tools,
-            experimenting with ideas, and building software that solves real
-            problems. Every project is an opportunity to learn something new,
-            and this portfolio showcases that journey.
+            I'm a 13-year-old student developer currently in 8th grade who
+            enjoys turning curiosity into projects. I love exploring different
+            areas of technology, from machine learning and AI to modern web
+            development and backend systems. Rather than staying in one field, I
+            enjoy learning new tools, experimenting with ideas, and building
+            software that solves real problems. Every project is an opportunity
+            to learn something new, and this portfolio showcases that journey.
           </p>
           <p className="font-sans font-normal text-lg max-w-3xl my-2 text-gray-300 md:text-xl">
             Alongside my personal projects, I also take on small freelance
