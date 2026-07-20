@@ -1,6 +1,7 @@
 import SkillCard from "./components/SkillCard";
 import { FaReact, FaServer, FaTools, FaBrain, FaGithub } from "react-icons/fa";
 import SpecularButton from "./components/SpecularButton";
+import DotGrid from "./components/DotGrid";
 
 function App() {
   const skillsData = [
@@ -54,8 +55,21 @@ function App() {
     },
   ];
   return (
-    <div className=" bg-[#050816] ">
-      <main className="min-h-screen flex flex-col text-white">
+    <div className=" bg-[#050816] relative min-h-screen ">
+      <div className="absolute inset-0 z-0">
+        <DotGrid
+          dotSize={2.5}
+          gap={26}
+          baseColor="rgba(255,255,255,0.12)"
+          activeColor="#FB923C"
+          proximity={80}
+          shockRadius={100}
+          shockStrength={1.5}
+          resistance={1000}
+          returnDuration={2}
+        />
+      </div>
+      <main className="min-h-screen flex flex-col text-white z-10">
         <nav
           className="
             fixed top-5 left-1/2 -translate-x-1/2
