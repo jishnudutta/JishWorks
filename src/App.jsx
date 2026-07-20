@@ -1,6 +1,6 @@
 import SkillCard from "./components/SkillCard";
 import { FaReact, FaServer, FaTools, FaBrain, FaGithub } from "react-icons/fa";
-import SpecularButton from "./components/SpecularButton";
+import GlassButton from "./components/GlassButton";
 import DotGrid from "./components/DotGrid";
 
 function App() {
@@ -60,8 +60,8 @@ function App() {
         <DotGrid
           dotSize={2.5}
           gap={26}
-          baseColor="rgba(255,255,255,0.12)"
-          activeColor="#FB923C"
+          baseColor="#2a2a2a"
+          activeColor="#fb923c"
           proximity={80}
           shockRadius={100}
           shockStrength={1.5}
@@ -181,23 +181,8 @@ function App() {
             JishOS, ByteBoard, and Smart Planter. You can explore all of them on
             my GitHub.
           </p>
-          <SpecularButton
-            size="lg"
-            radius={20}
+          <GlassButton
             tint="#3B82F6"
-            tintOpacity={0.18}
-            blur={16}
-            textColor="#ffffff"
-            lineColor="#3B82F6"
-            baseColor="rgba(255,255,255,0.05)"
-            intensity={1.2}
-            shineSize={10}
-            shineFade={45}
-            thickness={1.2}
-            speed={0.3}
-            followMouse
-            proximity={240}
-            autoAnimate={false}
             onClick={() =>
               window.open(
                 "https://github.com/jishnudutta",
@@ -206,11 +191,11 @@ function App() {
               )
             }
           >
-            <span className="flex gap-1">
+            <span className="flex items-center gap-2">
               <FaGithub className="text-lg" />
               <span>View GitHub</span>
             </span>
-          </SpecularButton>
+          </GlassButton>
         </section>
         <section
           id="contact"
@@ -220,23 +205,8 @@ function App() {
             Contact
           </h3>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <SpecularButton
-              size="lg"
-              radius={20}
+            <GlassButton
               tint="#5865F2"
-              tintOpacity={0.18}
-              blur={16}
-              textColor="#ffffff"
-              lineColor="#5865F2"
-              baseColor="rgba(255,255,255,0.05)"
-              intensity={1.2}
-              shineSize={10}
-              shineFade={45}
-              thickness={1.2}
-              speed={0.3}
-              followMouse
-              proximity={240}
-              autoAnimate={false}
               onClick={() =>
                 window.open(
                   "https://discord.com/users/jishnu9220",
@@ -246,48 +216,18 @@ function App() {
               }
             >
               Contact on Discord
-            </SpecularButton>
+            </GlassButton>
 
-            <SpecularButton
-              size="lg"
-              radius={20}
+            <GlassButton
               tint="#22C55E"
-              tintOpacity={0.18}
-              blur={16}
-              textColor="#ffffff"
-              lineColor="#22C55E"
-              baseColor="rgba(255,255,255,0.05)"
-              intensity={1.2}
-              shineSize={10}
-              shineFade={45}
-              thickness={1.2}
-              speed={0.3}
-              followMouse
-              proximity={240}
-              autoAnimate={false}
               onClick={() =>
                 (window.location.href = "mailto:jishnudutta2002@gmail.com")
               }
             >
               Email Me
-            </SpecularButton>
-            <SpecularButton
-              size="lg"
-              radius={20}
+            </GlassButton>
+            <GlassButton
               tint="#3B82F6"
-              tintOpacity={0.18}
-              blur={16}
-              textColor="#ffffff"
-              lineColor="#3B82F6"
-              baseColor="rgba(255,255,255,0.05)"
-              intensity={1.2}
-              shineSize={10}
-              shineFade={45}
-              thickness={1.2}
-              speed={0.3}
-              followMouse
-              proximity={240}
-              autoAnimate={false}
               onClick={() =>
                 window.open(
                   "https://slack.com/app_redirect?channel=U0B60V8BLHF",
@@ -297,7 +237,7 @@ function App() {
               }
             >
               Contact on Slack
-            </SpecularButton>
+            </GlassButton>
           </div>
           <div>
             <p className="mt-6 text-center text-sm text-gray-400 max-w-md">
