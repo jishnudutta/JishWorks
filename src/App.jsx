@@ -56,7 +56,7 @@ function App() {
   ];
   return (
     <div className=" bg-[#050816] relative min-h-screen ">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <DotGrid
           dotSize={2.5}
           gap={26}
@@ -69,7 +69,7 @@ function App() {
           returnDuration={2}
         />
       </div>
-      <main className="min-h-screen flex flex-col text-white z-10">
+      <main className="relative z-10 min-h-screen flex flex-col text-white">
         <nav
           className="
             fixed top-5 left-1/2 -translate-x-1/2
@@ -176,10 +176,28 @@ function App() {
             Projects
           </h3>
           <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
-            I'm passionate about building software across web development, AI,
-            electronics, and open source. Some of my favorite projects include
-            JishOS, ByteBoard, and Smart Planter. You can explore all of them on
-            my GitHub.
+            I enjoy creating software that blends design, engineering, and
+            innovation. My portfolio includes{" "}
+            <a
+              href="https://jishos.jishworks.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium hover:text-blue-400 transition-colors underline underline-offset-4"
+            >
+              JishOS
+            </a>
+            , backend services such as{" "}
+            <a
+              href="https://funapi.jishworks.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium hover:text-blue-400 transition-colors underline underline-offset-4"
+            >
+              FunAPI
+            </a>
+            , hardware projects like ByteBoard, and AI and IoT experiments.
+            Every project is an opportunity to learn, solve real problems, and
+            share my work with the community.
           </p>
           <GlassButton
             tint="#3B82F6"
