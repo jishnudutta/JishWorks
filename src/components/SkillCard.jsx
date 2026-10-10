@@ -7,7 +7,7 @@ function SkillCard({ logo, category, skills, description }) {
       return (
         <div
           key={`${skill.name}`}
-          className={`${skill.style} font-mono font-bold tracking-wide`}
+          className="skill-chip"
         >
           {skill.name}
         </div>
@@ -16,33 +16,16 @@ function SkillCard({ logo, category, skills, description }) {
   };
   return (
     <div
-      className="
-      bg-white/5
-        border border-white/10
-        rounded-3xl
-        p-8
-        backdrop-blur-lg
-        transition-all
-        duration-300
-        hover:border-orange-400/40
-        hover:-translate-y-1
-        max-w-md
-        "
+      className="skill-card"
     >
-      <div className="flex flex-row">
-        <Logo className="text-4xl text-cyan-400 mx-2" />
-        <h3 className="text-xl font-semibold text-blue-300 mb-2">{category}</h3>
+      <div className="skill-card-heading">
+        <span className="skill-icon"><Logo aria-hidden="true" /></span>
+        <h4>{category}</h4>
       </div>
-      <p
-        className="
-        text-gray-400
-        leading-relaxed
-        mt-2
-        "
-      >
+      <p className="skill-description">
         {description}
       </p>
-      <div className="flex flex-wrap gap-x-3 gap-y-2 mt-4">{skillsChips()}</div>
+      <div className="skill-chip-list">{skillsChips()}</div>
     </div>
   );
 }

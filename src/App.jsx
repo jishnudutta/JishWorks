@@ -1,5 +1,12 @@
 import SkillCard from "./components/SkillCard";
-import { FaReact, FaServer, FaTools, FaBrain, FaGithub } from "react-icons/fa";
+import {
+  FaReact,
+  FaServer,
+  FaTools,
+  FaBrain,
+  FaGithub,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 import GlassButton from "./components/GlassButton";
 import DotGrid from "./components/DotGrid";
 
@@ -103,23 +110,24 @@ function App() {
           id="hero"
           className="hero-section flex flex-col items-center justify-center mx-auto px-4 text-center"
         >
+          <p className="eyebrow hero-eyebrow">Student developer · India</p>
           <h2 className="hero-title font-bold font-display">
-            Hi, I'm Jishnu Dutta
+            I build useful things for the web.
           </h2>
           <p className="hero-copy max-w-3xl font-display font-medium text-gray-200">
-            A curious developer who loves exploring new technologies and
-            building meaningful projects. From machine learning and AI to modern
-            web development, I'm always learning, experimenting, and turning
-            ideas into reality.
+            I'm Jishnu Dutta, a curious developer exploring web development,
+            machine learning, and the ideas that connect them.
           </p>
+          <div className="hero-actions">
+            <a className="primary-link" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+            <a className="secondary-link" href="mailto:jishnudutta2002@gmail.com">Get in touch <FaExternalLinkAlt aria-hidden="true" /></a>
+          </div>
         </section>
         <section
           id="about"
           className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
-            About
-          </h3>
+          <div className="section-heading"><p className="eyebrow">A little about me</p><h3 className="font-display font-semibold">About</h3></div>
           <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
             I'm a 13-year-old Indian student developer currently in 8th grade
             who enjoys turning curiosity into projects. I love exploring
@@ -141,9 +149,7 @@ function App() {
           id="skills"
           className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
-            Skills
-          </h3>
+          <div className="section-heading"><p className="eyebrow">What I work with</p><h3 className="font-display font-semibold">Skills</h3></div>
           <div className="skill-grid grid gap-5 sm:gap-8 md:grid-cols-2 mt-6 sm:mt-10">
             {skillsData.map((card) => (
               <SkillCard
@@ -160,56 +166,27 @@ function App() {
           id="projects"
           className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
-            Projects
-          </h3>
-          <p className="font-sans font-normal text-lg md:text-xl max-w-3xl my-2 text-gray-300">
-            I enjoy creating software that blends design, engineering, and
-            innovation. My portfolio includes{" "}
-            <a
-              href="https://jishos.jishworks.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white font-medium hover:text-blue-400 transition-colors underline underline-offset-4"
-            >
-              JishOS
+          <div className="section-heading"><p className="eyebrow">Selected explorations</p><h3 className="font-display font-semibold">Projects</h3></div>
+          <p className="section-intro">A few things I've built while exploring software, hardware, and applied AI.</p>
+          <div className="project-grid">
+            <a className="project-card" href="https://jishos.jishworks.in" target="_blank" rel="noopener noreferrer">
+              <span className="project-type">Operating system · Web</span><span className="project-name">JishOS</span><span className="project-description">A personal project exploring operating system concepts and web experiences.</span><FaExternalLinkAlt className="project-arrow" aria-hidden="true" />
             </a>
-            , backend services such as{" "}
-            <a
-              href="https://funapi.jishworks.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white font-medium hover:text-blue-400 transition-colors underline underline-offset-4"
-            >
-              FunAPI
+            <a className="project-card" href="https://funapi.jishworks.in" target="_blank" rel="noopener noreferrer">
+              <span className="project-type">Backend · API</span><span className="project-name">FunAPI</span><span className="project-description">A backend service built to explore APIs and practical server-side development.</span><FaExternalLinkAlt className="project-arrow" aria-hidden="true" />
             </a>
-            , hardware projects like ByteBoard, and AI and IoT experiments.
-            Every project is an opportunity to learn, solve real problems, and
-            share my work with the community.
-          </p>
-          <GlassButton
-            tint="#3B82F6"
-            onClick={() =>
-              window.open(
-                "https://github.com/jishnudutta",
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-          >
-            <span className="flex items-center gap-2">
-              <FaGithub className="text-lg" />
-              <span>View GitHub</span>
-            </span>
-          </GlassButton>
+            <div className="project-card project-card-static">
+              <span className="project-type">Hardware · AI · IoT</span><span className="project-name">Experiments</span><span className="project-description">Small experiments spanning ByteBoard hardware, machine learning, and connected devices.</span>
+            </div>
+          </div>
+          <a className="github-link" href="https://github.com/jishnudutta" target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> More on GitHub <FaExternalLinkAlt className="github-external" aria-hidden="true" /></a>
         </section>
         <section
           id="contact"
           className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
-          <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
-            Contact
-          </h3>
+          <div className="section-heading"><p className="eyebrow">Have an idea?</p><h3 className="font-display font-semibold">Let's talk.</h3></div>
+          <p className="section-intro">If you have a project in mind or want to connect, choose the channel that works for you.</p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <GlassButton
               tint="#5865F2"
