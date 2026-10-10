@@ -84,6 +84,14 @@ export default function Services() {
           <h2>Tell me what you have in mind.</h2>
           <p>Send a short note about your business and the website you need. I’ll get back to you to discuss the next steps.</p>
           <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">Email about a project <FaExternalLinkAlt aria-hidden="true" /></a>
+          <div className="services-phone">
+            <span>Call or WhatsApp</span>
+            <a href="tel:+916291014636">+91 62910 14636</a>
+            <div className="services-phone-actions">
+              <a href="tel:+916291014636">Call</a>
+              <a href="https://wa.me/916291014636" target="_blank" rel="noopener noreferrer">WhatsApp <FaExternalLinkAlt aria-hidden="true" /></a>
+            </div>
+          </div>
           <a className="secondary-link" href="/">Return to portfolio</a>
         </section>
         <footer className="services-footer">© {new Date().getFullYear()} JishWorks · Built with curiosity.</footer>

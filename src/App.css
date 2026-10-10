@@ -292,6 +292,41 @@ button:focus-visible {
   margin-top: 0.65rem;
 }
 
+.services-phone {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 1.3rem;
+  color: #aeb8ca;
+  font-size: 0.85rem;
+}
+
+.services-phone > a {
+  color: #f5f7fb;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: 0.015em;
+}
+
+.services-phone-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 0.45rem;
+}
+
+.services-phone-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #ffad6b;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.services-phone-actions a:hover {
+  color: #ffd0ab;
+}
+
 .services-footer {
   padding: 1.5rem 1rem 2rem;
   border-top: 1px solid var(--line);
