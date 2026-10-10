@@ -133,6 +133,14 @@ function App() {
             <a className="primary-link" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
             <a className="secondary-link" href="mailto:jishnudutta2002@gmail.com">Get in touch <FaExternalLinkAlt aria-hidden="true" /></a>
           </div>
+          <div className="services-phone services-phone-top home-phone">
+            <span>Call or WhatsApp</span>
+            <a href="tel:+916291014636">+91 62910 14636</a>
+            <div className="services-phone-actions">
+              <a href="tel:+916291014636">Call</a>
+              <a href="https://wa.me/916291014636" target="_blank" rel="noopener noreferrer">WhatsApp <FaExternalLinkAlt aria-hidden="true" /></a>
+            </div>
+          </div>
         </section>
         <section
           id="about"
