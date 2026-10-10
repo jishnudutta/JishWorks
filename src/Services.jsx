@@ -86,6 +86,14 @@ export default function Services() {
           <h1>{t.headline}</h1>
           <p className="services-lede">{t.lede}</p>
           <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">{t.start} <FaArrowRight aria-hidden="true" /></a>
+          <div className="services-phone services-phone-top">
+            <span>{t.callWhatsapp}</span>
+            <a href="tel:+916291014636">+91 62910 14636</a>
+            <div className="services-phone-actions">
+              <a href="tel:+916291014636">{t.call}</a>
+              <a href="https://wa.me/916291014636" target="_blank" rel="noopener noreferrer">{t.whatsapp} <FaExternalLinkAlt aria-hidden="true" /></a>
+            </div>
+          </div>
           <aside className="pricing-note"><h2>{t.pricingTitle}</h2><p>{t.pricing}</p></aside>
         </header>
 
@@ -111,14 +119,6 @@ export default function Services() {
           <h2>{t.contactTitle}</h2>
           <p>{t.contactText}</p>
           <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">{t.email} <FaExternalLinkAlt aria-hidden="true" /></a>
-          <div className="services-phone">
-            <span>{t.callWhatsapp}</span>
-            <a href="tel:+916291014636">+91 62910 14636</a>
-            <div className="services-phone-actions">
-              <a href="tel:+916291014636">{t.call}</a>
-              <a href="https://wa.me/916291014636" target="_blank" rel="noopener noreferrer">{t.whatsapp} <FaExternalLinkAlt aria-hidden="true" /></a>
-            </div>
-          </div>
           <a className="secondary-link" href="/">{t.return}</a>
         </section>
         <footer className="services-footer">© {new Date().getFullYear()} JishWorks · {t.footer}</footer>

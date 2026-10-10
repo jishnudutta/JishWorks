@@ -300,6 +300,33 @@ button:focus-visible {
   font-size: 0.85rem;
 }
 
+.services-phone-top {
+  display: flex;
+  width: min(100%, 43rem);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.9rem;
+  margin-top: 1.3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.services-phone-top > span {
+  color: #aeb8ca;
+  font-size: 0.82rem;
+}
+
+.services-phone-top > a {
+  font-size: 1rem;
+}
+
+.services-phone-top .services-phone-actions {
+  gap: 0.8rem;
+  margin: 0 0 0 auto;
+}
+
 .services-phone > a {
   color: #f5f7fb;
   font-size: 1.15rem;
