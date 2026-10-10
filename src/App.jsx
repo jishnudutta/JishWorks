@@ -9,8 +9,15 @@ import {
 } from "react-icons/fa";
 import GlassButton from "./components/GlassButton";
 import DotGrid from "./components/DotGrid";
+import Services from "./Services";
 
 function App() {
+  if (window.location.pathname.replace(/\/$/, "") === "/services") {
+    document.title = "Web Development for Local Businesses | JishWorks";
+    return <Services />;
+  }
+  document.title = "JishWorks | Jishnu Dutta";
+
   const skillsData = [
     {
       logo: FaReact,
@@ -99,6 +106,10 @@ function App() {
 
             <a href="#projects" className="hover:text-white transition">
               Projects
+            </a>
+
+            <a href="/services" className="hover:text-white transition">
+              Services
             </a>
 
             <a href="#contact" className="hover:text-white transition">
