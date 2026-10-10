@@ -7,7 +7,7 @@ function SkillCard({ logo, category, skills, description }) {
       return (
         <div
           key={`${skill.name}`}
-          className="skill-chip"
+          className={`skill-chip ${skill.style}`}
         >
           {skill.name}
         </div>
