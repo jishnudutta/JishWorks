@@ -1,31 +1,67 @@
+import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaCheck, FaExternalLinkAlt } from "react-icons/fa";
 import DotGrid from "./components/DotGrid";
 
 const services = [
   {
     number: "01",
-    title: "A website from the ground up",
-    description:
-      "A clear, welcoming website that explains what you do, builds trust, and helps new customers take the next step.",
-    details: ["Custom design", "Mobile-friendly pages", "Contact and enquiry links"],
+    title: { en: "A website from the ground up", bn: "শুরু থেকে একটি ওয়েবসাইট" },
+    description: {
+      en: "A complete, custom website for your business.",
+      bn: "আপনার ব্যবসার জন্য সম্পূর্ণ, নিজস্ব ওয়েবসাইট।",
+    },
+    details: { en: ["Custom design", "Works on phones", "Contact links"], bn: ["নিজস্ব ডিজাইন", "মোবাইলে ব্যবহারযোগ্য", "যোগাযোগের লিংক"] },
   },
   {
     number: "02",
-    title: "A focused landing page",
-    description:
-      "A single page for a service, event, or offer—with the essential information and a direct way for people to reach you.",
-    details: ["One clear message", "Service highlights", "Call or WhatsApp action"],
+    title: { en: "A focused landing page", bn: "একটি লক্ষ্যভিত্তিক ল্যান্ডিং পেজ" },
+    description: {
+      en: "One focused page for a service, product, or offer.",
+      bn: "পরিষেবা, পণ্য বা অফারের জন্য একটি লক্ষ্যভিত্তিক পেজ।",
+    },
+    details: { en: ["Clear information", "Key details", "Call or WhatsApp link"], bn: ["স্পষ্ট তথ্য", "প্রয়োজনীয় বিবরণ", "কল বা WhatsApp লিংক"] },
   },
   {
     number: "03",
-    title: "A refresh for your current site",
-    description:
-      "Update an outdated website with a cleaner look, easier navigation, and a better experience on phones and tablets.",
-    details: ["Visual refresh", "Responsive improvements", "Content and layout updates"],
+    title: { en: "A refresh for your current site", bn: "আপনার বর্তমান ওয়েবসাইট নতুন করে সাজানো" },
+    description: {
+      en: "Improve your current website’s design and mobile experience.",
+      bn: "বর্তমান ওয়েবসাইটের ডিজাইন ও মোবাইল অভিজ্ঞতা উন্নত করা।",
+    },
+    details: { en: ["Updated design", "Mobile improvements", "Content updates"], bn: ["নতুন ডিজাইন", "মোবাইলের উন্নতি", "কনটেন্ট আপডেট"] },
   },
 ];
 
+const copy = {
+  en: {
+    portfolio: "Portfolio", services: "Services", contact: "Contact", back: "Back to portfolio",
+    eyebrow: "Websites for local businesses", headline: "A simple website that helps customers reach you.",
+    lede: "Clean, mobile-friendly websites for small businesses.",
+    start: "Discuss your website", pricingTitle: "Simple, flexible pricing", pricing: "Website: one-time, affordable payment, negotiable to fit your needs. Hosting and maintenance: separate monthly payment.",
+    ways: "Services", servicesTitle: "What I can build",
+    getStarted: "Get in touch", contactTitle: "Have a project in mind?", contactText: "Tell me what your business needs.",
+    email: "Email about a project", callWhatsapp: "Call or WhatsApp", call: "Call", whatsapp: "WhatsApp", return: "Return to portfolio", footer: "Built with curiosity.",
+  },
+  bn: {
+    portfolio: "পোর্টফোলিও", services: "পরিষেবা", contact: "যোগাযোগ", back: "পোর্টফোলিওতে ফিরুন",
+    eyebrow: "স্থানীয় ব্যবসার জন্য ওয়েবসাইট", headline: "গ্রাহকদের যোগাযোগের সহজ উপায় দিন।",
+    lede: "ছোট ব্যবসার জন্য পরিচ্ছন্ন, মোবাইল-উপযোগী ওয়েবসাইট।",
+    start: "ওয়েবসাইট নিয়ে কথা বলুন", pricingTitle: "সহজ ও নমনীয় মূল্য", pricing: "ওয়েবসাইট: একবারের সাশ্রয়ী মূল্য, আপনার প্রয়োজন অনুযায়ী আলোচনা সাপেক্ষ। হোস্টিং ও রক্ষণাবেক্ষণ: আলাদা মাসিক ফি।",
+    ways: "পরিষেবা", servicesTitle: "যা তৈরি করে দিতে পারি",
+    getStarted: "যোগাযোগ করুন", contactTitle: "কোনো পরিকল্পনা আছে?", contactText: "আপনার ব্যবসার কী প্রয়োজন, জানান।",
+    email: "প্রজেক্ট নিয়ে ইমেইল করুন", callWhatsapp: "কল বা WhatsApp করুন", call: "কল করুন", whatsapp: "WhatsApp করুন", return: "পোর্টফোলিওতে ফিরুন", footer: "কৌতূহল নিয়ে তৈরি।",
+  },
+};
+
 export default function Services() {
+  const [language, setLanguage] = useState("en");
+  const t = copy[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language === "bn" ? "bn" : "en";
+    document.title = language === "bn" ? "স্থানীয় ব্যবসার জন্য ওয়েবসাইট | JishWorks" : "Web Development for Local Businesses | JishWorks";
+  }, [language]);
+
   return (
     <div className="services-page relative min-h-screen bg-[#050816] text-white">
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
@@ -35,66 +71,57 @@ export default function Services() {
         <nav className="site-nav fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 flex items-center rounded-full bg-white/10 backdrop-blur-2xl border border-white/10 shadow-2xl">
           <a className="site-brand font-bold tracking-tight text-white select-none shrink-0" href="/">Jish<span className="text-orange-400">Works</span></a>
           <div className="site-nav-links ml-auto flex items-center text-gray-300">
-            <a href="/" className="hover:text-white transition">Portfolio</a>
-            <a href="#services" className="hover:text-white transition">Services</a>
-            <a href="#contact" className="hover:text-white transition">Contact</a>
+            <a href="/" className="hover:text-white transition">{t.portfolio}</a>
+            <a href="#services" className="hover:text-white transition">{t.services}</a>
+            <a href="#contact" className="hover:text-white transition">{t.contact}</a>
           </div>
+          <button type="button" className="language-toggle" onClick={() => setLanguage(language === "en" ? "bn" : "en")} aria-label={language === "en" ? "বাংলায় দেখুন" : "View in English"}>
+            {language === "en" ? "বাংলা" : "English"}
+          </button>
         </nav>
 
         <header className="services-hero">
-          <a className="services-back" href="/"><FaArrowLeft aria-hidden="true" /> Back to portfolio</a>
-          <p className="eyebrow">Web development for local businesses</p>
-          <h1>Make it easier for customers to find you and get in touch.</h1>
-          <p className="services-lede">I build thoughtful, mobile-friendly websites for small businesses and independent people. The goal is simple: explain what you offer and make the next step clear.</p>
-          <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">Tell me about your project <FaArrowRight aria-hidden="true" /></a>
-          <p className="services-note">Every project starts with a conversation about your needs, timeline, and budget.</p>
+          <a className="services-back" href="/"><FaArrowLeft aria-hidden="true" /> {t.back}</a>
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h1>{t.headline}</h1>
+          <p className="services-lede">{t.lede}</p>
+          <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">{t.start} <FaArrowRight aria-hidden="true" /></a>
+          <aside className="pricing-note"><h2>{t.pricingTitle}</h2><p>{t.pricing}</p></aside>
         </header>
 
         <section id="services" className="services-content">
           <div className="section-heading">
-            <p className="eyebrow">Ways I can help</p>
-            <h2>Websites that work for your business.</h2>
+            <p className="eyebrow">{t.ways}</p>
+            <h2>{t.servicesTitle}</h2>
           </div>
           <div className="services-grid">
             {services.map((service) => (
               <article className="service-card" key={service.number}>
                 <span className="service-number">{service.number}</span>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <ul>{service.details.map((detail) => <li key={detail}><FaCheck aria-hidden="true" />{detail}</li>)}</ul>
+                <h3>{service.title[language]}</h3>
+                <p>{service.description[language]}</p>
+                <ul>{service.details[language].map((detail) => <li key={detail}><FaCheck aria-hidden="true" />{detail}</li>)}</ul>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="services-content services-process">
-          <div className="section-heading">
-            <p className="eyebrow">A straightforward process</p>
-            <h2>From first idea to launch.</h2>
-          </div>
-          <div className="process-steps">
-            <div><span>01</span><h3>We talk</h3><p>Share what your business does, who you want to reach, and what you need the site to do.</p></div>
-            <div><span>02</span><h3>I build</h3><p>I shape the content and design into a responsive website, then share it with you for feedback.</p></div>
-            <div><span>03</span><h3>We launch</h3><p>Once everything looks right, we get your site ready to share with your customers.</p></div>
-          </div>
-        </section>
-
         <section id="contact" className="services-contact">
-          <p className="eyebrow">Let’s get started</p>
-          <h2>Tell me what you have in mind.</h2>
-          <p>Send a short note about your business and the website you need. I’ll get back to you to discuss the next steps.</p>
-          <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">Email about a project <FaExternalLinkAlt aria-hidden="true" /></a>
+          <p className="eyebrow">{t.getStarted}</p>
+          <h2>{t.contactTitle}</h2>
+          <p>{t.contactText}</p>
+          <a className="primary-link" href="mailto:jishnudutta2002@gmail.com?subject=Website%20project">{t.email} <FaExternalLinkAlt aria-hidden="true" /></a>
           <div className="services-phone">
-            <span>Call or WhatsApp</span>
+            <span>{t.callWhatsapp}</span>
             <a href="tel:+916291014636">+91 62910 14636</a>
             <div className="services-phone-actions">
-              <a href="tel:+916291014636">Call</a>
-              <a href="https://wa.me/916291014636" target="_blank" rel="noopener noreferrer">WhatsApp <FaExternalLinkAlt aria-hidden="true" /></a>
+              <a href="tel:+916291014636">{t.call}</a>
+              <a href="https://wa.me/916291014636" target="_blank" rel="noopener noreferrer">{t.whatsapp} <FaExternalLinkAlt aria-hidden="true" /></a>
             </div>
           </div>
-          <a className="secondary-link" href="/">Return to portfolio</a>
+          <a className="secondary-link" href="/">{t.return}</a>
         </section>
-        <footer className="services-footer">© {new Date().getFullYear()} JishWorks · Built with curiosity.</footer>
+        <footer className="services-footer">© {new Date().getFullYear()} JishWorks · {t.footer}</footer>
       </main>
     </div>
   );
