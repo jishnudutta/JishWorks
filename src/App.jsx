@@ -71,24 +71,13 @@ function App() {
       </div>
       <main className="relative z-10 min-h-screen flex flex-col text-white">
         <nav
-          className="
-            fixed top-5 left-1/2 -translate-x-1/2
-            z-50
-            flex items-center
-            w-[95%] max-w-6xl
-            px-8 py-4
-            rounded-full
-            bg-white/10
-            backdrop-blur-2xl
-            border border-white/10
-            shadow-2xl
-          "
+          className="site-nav fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 flex items-center rounded-full bg-white/10 backdrop-blur-2xl border border-white/10 shadow-2xl"
         >
-          <h1 className="text-2xl font-bold tracking-tight text-white select-none">
+          <h1 className="site-brand font-bold tracking-tight text-white select-none shrink-0">
             Jish<span className="text-orange-400">Works</span>
           </h1>
 
-          <div className="ml-auto flex items-center md:gap-8 gap-3 text-gray-300">
+          <div className="site-nav-links ml-auto flex items-center text-gray-300">
             <a href="#hero" className="hover:text-white transition">
               Top
             </a>
@@ -112,13 +101,12 @@ function App() {
         </nav>
         <section
           id="hero"
-          className="flex flex-col items-center justify-center mx-auto mt-auto min-h-[80vh] py-10 px-2"
+          className="hero-section flex flex-col items-center justify-center mx-auto px-4 text-center"
         >
-          <h2 className="font-bold text-5xl md:text-8xl font-display py-8">
+          <h2 className="hero-title font-bold font-display">
             Hi, I'm Jishnu Dutta
           </h2>
-          <br />
-          <p className="max-w-3xl py-5 font-display font-medium md:text-2xl text-lg lg:text-3xl text-gray-200 ml-2">
+          <p className="hero-copy max-w-3xl font-display font-medium text-gray-200">
             A curious developer who loves exploring new technologies and
             building meaningful projects. From machine learning and AI to modern
             web development, I'm always learning, experimenting, and turning
@@ -127,7 +115,7 @@ function App() {
         </section>
         <section
           id="about"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
+          className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
           <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             About
@@ -151,12 +139,12 @@ function App() {
         </section>
         <section
           id="skills"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
+          className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
           <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             Skills
           </h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 mt-10">
+          <div className="skill-grid grid gap-5 sm:gap-8 md:grid-cols-2 mt-6 sm:mt-10">
             {skillsData.map((card) => (
               <SkillCard
                 key={card.category}
@@ -170,7 +158,7 @@ function App() {
         </section>
         <section
           id="projects"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
+          className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
           <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             Projects
@@ -217,7 +205,7 @@ function App() {
         </section>
         <section
           id="contact"
-          className="flex flex-col items-center justify-center mx-auto mt-10 px-2 scroll-mt-28 mb-20"
+          className="content-section flex flex-col items-center justify-center mx-auto mt-10 px-4 scroll-mt-28 mb-20"
         >
           <h3 className="font-display font-semibold text-3xl md:text-5xl mb-6">
             Contact
