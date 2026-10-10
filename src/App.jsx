@@ -112,11 +112,11 @@ function App() {
         >
           <p className="eyebrow hero-eyebrow">Student developer · India</p>
           <h2 className="hero-title font-bold font-display">
-            I build useful things for the web.
+            Curious about tech. Always exploring.
           </h2>
           <p className="hero-copy max-w-3xl font-display font-medium text-gray-200">
-            I'm Jishnu Dutta, a curious developer exploring web development,
-            machine learning, and the ideas that connect them.
+            I'm Jishnu Dutta. I love exploring technology, building all kinds
+            of things, and learning something new with every project.
           </p>
           <div className="hero-actions">
             <a className="primary-link" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
